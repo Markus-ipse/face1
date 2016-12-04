@@ -15,9 +15,10 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "app",
+      "prefix": "fo",
       "mobile": false,
       "styles": [
+        "../node_modules/bulma/css/bulma.css",
         "styles.css"
       ],
       "scripts": [],

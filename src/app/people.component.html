@@ -1,0 +1,17 @@
+<h2 class="subtitle">My peeps</h2>
+<ul class="columns is-multiline">
+  <li *ngFor="let person of people" class="card column is-one-quarter">
+    <div class="card-image">
+      <figure class="image">
+        <img
+          src="{{person.imgUrl}}"
+          alt="{{person.firstName}} {{person.lastName}}"
+        >
+      </figure>
+    </div>
+    <div class="card-content">
+      <span class="content">{{person.firstName}} {{person.lastName}}</span>
+    </div>
+
+  </li>
+</ul>
