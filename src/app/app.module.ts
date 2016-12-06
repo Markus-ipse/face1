@@ -9,7 +9,7 @@ import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 
 
 import { AppComponent } from './app.component';
-import {PeopleComponent} from './people.component';
+import {PeopleComponent} from './people/people.component';
 import {InMemoryPeopleDataService} from './people-data';
 
 @NgModule({
@@ -22,7 +22,7 @@ import {InMemoryPeopleDataService} from './people-data';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryPeopleDataService),
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
