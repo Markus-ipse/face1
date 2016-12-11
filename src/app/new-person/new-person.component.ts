@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Person} from '../person';
 
 @Component({
@@ -7,14 +7,15 @@ import {Person} from '../person';
   styleUrls: ['./new-person.component.css']
 })
 export class NewPersonComponent implements OnInit {
-  model = new Person(5, '', '', '');
+  model = new Person(null, '', '', '');
 
   submitted = false;
+  @Output() onSubmit = new EventEmitter<Person>();
 
-  onSubmit() { this.submitted = true; }
+  submit() {
+    this.submitted = true;
+    this.onSubmit.emit(this.model);
+  }
 
   ngOnInit(): void {}
-
-  // TODO: Remove this when we're done
-  get diagnostic() { return JSON.stringify(this.model); }
 }
