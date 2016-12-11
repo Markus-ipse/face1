@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit()" #personForm="ngForm">
+  <label for="firstName">First name</label>
+  <p class="control">
+    <input
+      [(ngModel)]="model.firstName"
+      type="text"
+      class="input"
+      name="firstName"
+      id="firstName"
+    >
+  </p>
+  <label for="lastName">Last name</label>
+  <p class="control">
+    <input
+      [(ngModel)]="model.lastName"
+      type="text"
+      class="input"
+      name="lastName"
+      id="lastName"
+    >
+  </p>
+  <label for="pictureUrl">Picture url</label>
+  <p class="control">
+    <input
+      [(ngModel)]="model.imgUrl"
+      type="text"
+      class="input"
+      name="pictureUrl"
+      id="pictureUrl"
+    >
+  </p>
+  <p class="control">
+    <button type="submit" class="button is-primary">Submit</button>
+  </p>
+</form>
+{{diagnostic}}

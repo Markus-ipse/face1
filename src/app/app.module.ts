@@ -11,11 +11,13 @@ import {InMemoryWebApiModule} from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
 import {PeopleComponent} from './people/people.component';
 import {InMemoryPeopleDataService} from './people-data';
+import { NewPersonComponent } from './new-person/new-person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleComponent,
+    NewPersonComponent,
   ],
   imports: [
     BrowserModule,
