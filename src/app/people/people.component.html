@@ -1,18 +1,20 @@
 <h2 class="subtitle">My peeps</h2>
-<ul class="columns is-mobile container">
-  <li *ngFor="let person of people" class="card column is-one-third-mobile is-one-quarter-tablet">
-    <div class="card-image">
-      <figure class="image">
-        <img
-          src="{{person.imgUrl}}"
-          alt="{{person.firstName}} {{person.lastName}}"
-        >
-      </figure>
+<ul class="columns is-multiline is-mobile container">
+  <li *ngFor="let person of people" class="column is-one-third-mobile is-one-quarter-tablet">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image img-preview">
+          <img
+            src="{{person.imgUrl}}"
+            alt="{{person.firstName}} {{person.lastName}}"
+            onerror="this.onerror=null;this.src='assets/camera.png'"
+          >
+        </figure>
+      </div>
+      <div class="card-content">
+        <span class="content">{{person.firstName}} {{person.lastName}}</span>
+      </div>
     </div>
-    <div class="card-content">
-      <span class="content">{{person.firstName}} {{person.lastName}}</span>
-    </div>
-
   </li>
 </ul>
 <f1-new-person (onSubmit)="addPerson($event)"></f1-new-person>

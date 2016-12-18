@@ -6,7 +6,8 @@ import { PeopleService } from '../people.service';
 @Component({
   selector: 'f1-people-list',
   templateUrl: 'people.component.html',
-  providers: [PeopleService]
+  providers: [PeopleService],
+  styleUrls: ['people.component.css']
 })
 export class PeopleComponent implements OnInit {
   people: Person[];
@@ -20,7 +21,7 @@ export class PeopleComponent implements OnInit {
 
   addPerson(person: Person): void {
     this.peopleService.create(person.firstName, person.lastName, person.imgUrl)
-      .then(person => this.people.push(person))
+      .then(p => this.people.push(p));
   }
 
   ngOnInit(): void {
