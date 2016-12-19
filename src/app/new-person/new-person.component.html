@@ -1,36 +1,50 @@
-<form (ngSubmit)="submit()" #personForm="ngForm">
-  <label for="firstName">First name</label>
-  <p class="control">
-    <input
-      [(ngModel)]="model.firstName"
-      type="text"
-      class="input"
-      name="firstName"
-      id="firstName"
-    >
-  </p>
-  <label for="lastName">Last name</label>
-  <p class="control">
-    <input
-      [(ngModel)]="model.lastName"
-      type="text"
-      class="input"
-      name="lastName"
-      id="lastName"
-    >
-  </p>
-  <label for="pictureUrl">Picture url</label>
-  <p class="control">
-    <input
-      [(ngModel)]="model.imgUrl"
-      type="text"
-      class="input"
-      name="pictureUrl"
-      id="pictureUrl"
-    >
-  </p>
-  <p class="control">
-    <button type="submit" class="button is-primary">Submit</button>
-  </p>
-</form>
-{{diagnostic}}
+<div [ngClass]="{'modal is-active': isActive, 'card add-card': !isActive}">
+  <div *ngIf="isActive" class="modal-background"></div>
+  <div *ngIf="isActive" class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete"></button>
+    </header>
+    <form (ngSubmit)="submit()" #personForm="ngForm">
+      <section class="modal-card-body">
+        <label for="firstName">First name</label>
+        <p class="control">
+          <input
+            [(ngModel)]="model.firstName"
+            type="text"
+            class="input"
+            name="firstName"
+            id="firstName"
+          >
+        </p>
+        <label for="lastName">Last name</label>
+        <p class="control">
+          <input
+            [(ngModel)]="model.lastName"
+            type="text"
+            class="input"
+            name="lastName"
+            id="lastName"
+          >
+        </p>
+        <label for="pictureUrl">Picture url</label>
+        <p class="control">
+          <input
+            [(ngModel)]="model.imgUrl"
+            type="text"
+            class="input"
+            name="pictureUrl"
+            id="pictureUrl"
+          >
+        </p>
+      </section>
+      <footer class="modal-card-foot">
+        <button type="submit" class="button is-primary">Add</button>
+        <button class="button" (click)="cancel()">Cancel</button>
+      </footer>
+    </form>
+  </div>
+  <div *ngIf="!isActive">
+    <button (click)="activate()" class="button is-primary">Add</button>
+  </div>
+</div>

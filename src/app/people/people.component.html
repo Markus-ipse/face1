@@ -1,6 +1,6 @@
 <h2 class="subtitle">My peeps</h2>
-<ul class="columns is-multiline is-mobile container">
-  <li *ngFor="let person of people" class="column is-one-third-mobile is-one-quarter-tablet">
+<div class="columns is-multiline is-mobile container">
+  <div *ngFor="let person of people" class="column is-one-third-mobile is-one-quarter-tablet">
     <div class="card">
       <div class="card-image">
         <figure class="image img-preview">
@@ -15,6 +15,6 @@
         <span class="content">{{person.firstName}} {{person.lastName}}</span>
       </div>
     </div>
-  </li>
-</ul>
-<f1-new-person (onSubmit)="addPerson($event)"></f1-new-person>
+  </div>
+  <f1-new-person (onSubmit)="addPerson($event)"></f1-new-person>
+</div>
