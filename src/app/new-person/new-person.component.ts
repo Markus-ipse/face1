@@ -11,7 +11,6 @@ const inActiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
 export class NewPersonComponent  {
   model = new Person(null, '', '', '');
 
-  submitted = false;
   isActive = false;
 
   @Output() onSubmit = new EventEmitter<Person>();
@@ -22,8 +21,12 @@ export class NewPersonComponent  {
     this.classes = 'modal is-active';
   }
 
+  cancel() {
+    this.isActive = false;
+    this.classes = inActiveClasses;
+  }
+
   submit() {
-    this.submitted = true;
     this.isActive = false;
     this.classes = inActiveClasses;
     this.onSubmit.emit(this.model);
