@@ -12,12 +12,14 @@ import { AppComponent } from './app.component';
 import {PeopleComponent} from './people/people.component';
 import {InMemoryPeopleDataService} from './people-data';
 import { NewPersonComponent } from './new-person/new-person.component';
+import { CardComponent } from './people/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeopleComponent,
     NewPersonComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
