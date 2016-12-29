@@ -1,7 +1,7 @@
 import {Component, Output, EventEmitter, HostBinding} from '@angular/core';
 import {Person} from '../person';
 
-const inActiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
+const inactiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
 
 @Component({
   selector: 'f1-new-person',
@@ -13,23 +13,23 @@ export class NewPersonComponent  {
 
   isActive = false;
 
-  @Output() onSubmit = new EventEmitter<Person>();
-  @HostBinding('class') classes = inActiveClasses;
+  @Output() submitted = new EventEmitter<Person>();
+  @HostBinding('class') classes = inactiveClasses;
 
-  activate() {
+  onActivate() {
     this.isActive = true;
     this.classes = 'modal is-active';
   }
 
-  cancel() {
+  onCancel() {
     this.isActive = false;
-    this.classes = inActiveClasses;
+    this.classes = inactiveClasses;
   }
 
-  submit() {
+  onSubmit() {
     this.isActive = false;
-    this.classes = inActiveClasses;
-    this.onSubmit.emit(this.model);
+    this.classes = inactiveClasses;
+    this.submitted.emit(this.model);
     this.model = new Person(null, '', '', '');
   }
 }

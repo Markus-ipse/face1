@@ -19,7 +19,7 @@ export class PeopleComponent implements OnInit {
       .then(people => this.people = people);
   }
 
-  addPerson(person: Person): void {
+  onAddPerson(person: Person): void {
     this.peopleService.create(person.firstName, person.lastName, person.imgUrl)
       .then(p => this.people.push(p));
   }

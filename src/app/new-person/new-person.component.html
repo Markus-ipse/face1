@@ -5,7 +5,7 @@
       <p class="modal-card-title">Modal title</p>
       <button class="delete" (click)="cancel()"></button>
     </header>
-    <form (ngSubmit)="submit()" #personForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #personForm="ngForm">
       <section class="modal-card-body">
         <label for="firstName">First name</label>
         <p class="control">
@@ -40,11 +40,11 @@
       </section>
       <footer class="modal-card-foot">
         <button type="submit" class="button is-primary">Add</button>
-        <button type="button" class="button" (click)="cancel()">Cancel</button>
+        <button type="button" class="button" (click)="onCancel()">Cancel</button>
       </footer>
     </form>
   </div>
   <div *ngIf="!isActive">
-    <button (click)="activate()" class="button is-primary">Add</button>
+    <button (click)="onActivate()" class="button is-primary">Add</button>
   </div>
 </div>
