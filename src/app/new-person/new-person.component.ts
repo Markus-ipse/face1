@@ -16,17 +16,17 @@ export class NewPersonComponent  {
   @Output() submitted = new EventEmitter<Person>();
   @HostBinding('class') classes = inactiveClasses;
 
-  activate() {
+  onActivate() {
     this.isActive = true;
     this.classes = 'modal is-active';
   }
 
-  cancel() {
+  onCancel() {
     this.isActive = false;
     this.classes = inactiveClasses;
   }
 
-  submit() {
+  onSubmit() {
     this.isActive = false;
     this.classes = inactiveClasses;
     this.submitted.emit(this.model);
