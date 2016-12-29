@@ -3,5 +3,5 @@
   <div *ngFor="let person of people" class="column is-one-third-mobile is-one-quarter-tablet">
     <f1-card [person]="person"></f1-card>
   </div>
-  <f1-new-person (onSubmit)="addPerson($event)"></f1-new-person>
+  <f1-new-person (submitted)="onAddPerson($event)"></f1-new-person>
 </div>
