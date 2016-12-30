@@ -4,8 +4,8 @@ import {PeopleComponent} from './people/people.component';
 import {GuessNameComponent} from './guess-name/guess-name.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/people', pathMatch: 'full'},
-  {path: 'people', component: PeopleComponent},
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: PeopleComponent},
   {path: 'play', component: GuessNameComponent}
 ];
 

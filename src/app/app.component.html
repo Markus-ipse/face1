@@ -1,4 +1,10 @@
 <h1 class="title">{{title}}</h1>
+<nav class="nav has-shadow">
+  <div class="nav-left">
+    <a routerLink="/dashboard" routerLinkActive="is-active" class="nav-item is-tab">Dashboard</a>
+    <a routerLink="/play" routerLinkActive="is-active" class="nav-item is-tab">Play</a>
+  </div>
+</nav>
 <div class="section">
   <router-outlet></router-outlet>
 </div>

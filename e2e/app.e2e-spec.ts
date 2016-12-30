@@ -7,8 +7,8 @@ describe('face1 App', function() {
     page = new Face1Page();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying Face1', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Face1');
   });
 });
