@@ -5,9 +5,9 @@ import { PeopleService } from '../people.service';
 
 @Component({
   selector: 'f1-people-list',
-  templateUrl: 'people.component.html',
+  templateUrl: './people.component.html',
   providers: [PeopleService],
-  styleUrls: ['people.component.css']
+  styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
   people: Person[];

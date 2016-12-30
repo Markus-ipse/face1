@@ -3,7 +3,7 @@
   <div *ngIf="isActive" class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Modal title</p>
-      <button class="delete" (click)="cancel()"></button>
+      <button class="delete" (click)="onCancel()"></button>
     </header>
     <form (ngSubmit)="onSubmit()" #personForm="ngForm">
       <section class="modal-card-body">
