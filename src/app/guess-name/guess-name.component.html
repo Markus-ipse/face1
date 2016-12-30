@@ -1,6 +1,6 @@
 <div *ngIf="personToGuess">
   <img [src]="personToGuess.imgUrl" alt="Someone">
-  <form *ngIf="!allCorrectlyGuessed" (ngSubmit)="guessName(guess.value); guess.value=''">
+  <form *ngIf="!allCorrectlyGuessed" (ngSubmit)="guessName(guess.value); guess.value=''" #guessForm="ngForm">
     <p class="control">
       <input type="text" #guess>
     </p>

@@ -2,12 +2,17 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+
+@Component({selector: 'router-outlet', template: ''}) // tslint:disable-line:component-selector
+class RouterOutletStubComponent { }
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        RouterOutletStubComponent
       ],
     });
     TestBed.compileComponents();

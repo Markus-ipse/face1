@@ -4,6 +4,19 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { GuessNameComponent } from './guess-name.component';
+import {Person} from '../person';
+import {PeopleService} from '../people.service';
+import {FormsModule} from '@angular/forms';
+
+class PeopleServiceSpy {
+  testPerson = new Person(42, 'John', 'doe', 'someUrl');
+
+  getPeople = jasmine.createSpy('getPeople').and.callFake(
+    () => Promise
+      .resolve(true)
+      .then(() => [Object.assign(this.testPerson)])
+  );
+}
 
 describe('GuessNameComponent', () => {
   let component: GuessNameComponent;
@@ -11,8 +24,16 @@ describe('GuessNameComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ FormsModule ],
       declarations: [ GuessNameComponent ]
     })
+      .overrideComponent(GuessNameComponent, {
+        set: {
+          providers: [
+            { provide: PeopleService, useClass: PeopleServiceSpy }
+          ]
+        }
+      })
     .compileComponents();
   }));
 
