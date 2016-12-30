@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CardComponent } from './card.component';
-import {Person} from '../../person';
+import {Person} from '../../person.model';
 
 describe('CardComponent', () => {
   let component: CardComponent;

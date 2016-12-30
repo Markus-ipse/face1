@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { GuessNameComponent } from './guess-name.component';
-import {Person} from '../person';
+import {Person} from '../person.model';
 import {PeopleService} from '../people.service';
 import {FormsModule} from '@angular/forms';
 

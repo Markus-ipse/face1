@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Person} from '../person';
+import {Person, nullPerson} from '../person.model';
 import {PeopleService} from '../people.service';
 
 @Component({
@@ -10,7 +10,7 @@ import {PeopleService} from '../people.service';
 })
 export class GuessNameComponent implements OnInit {
   people: Person[];
-  personToGuess: Person;
+  personToGuess = nullPerson;
   correctGuesses: number = 0;
   allCorrectlyGuessed: boolean = false;
 
