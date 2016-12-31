@@ -1,5 +1,6 @@
 import {Component, Output, EventEmitter, HostBinding} from '@angular/core';
 import {Person} from '../person.model';
+import { CropperSettings } from 'ng2-img-cropper';
 
 const inactiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
 
@@ -8,13 +9,28 @@ const inactiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
   templateUrl: './new-person.component.html',
   styleUrls: ['./new-person.component.css']
 })
-export class NewPersonComponent  {
-  model = new Person(null, '', '', '');
-
+export class NewPersonComponent {
+  model = new Person(null, '', '');
   isActive = false;
+  data: any;
+  cropperSettings: CropperSettings;
 
   @Output() submitted = new EventEmitter<Person>();
   @HostBinding('class') classes = inactiveClasses;
+
+  constructor() {
+
+    this.cropperSettings = new CropperSettings();
+    this.cropperSettings.width = 100;
+    this.cropperSettings.height = 100;
+    this.cropperSettings.croppedWidth = 600;
+    this.cropperSettings.croppedHeight = 600;
+    this.cropperSettings.canvasWidth = 400;
+    this.cropperSettings.canvasHeight = 300;
+
+    this.data = {};
+
+  }
 
   onActivate() {
     this.isActive = true;
@@ -29,7 +45,8 @@ export class NewPersonComponent  {
   onSubmit() {
     this.isActive = false;
     this.classes = inactiveClasses;
+    this.model.imgUrl = this.data.image;
     this.submitted.emit(this.model);
-    this.model = new Person(null, '', '', '');
+    this.model = new Person(null, '', '');
   }
 }

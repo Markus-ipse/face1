@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ImageCropperComponent } from 'ng2-img-cropper';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { GuessNameComponent } from './guess-name/guess-name.component';
     NewPersonComponent,
     CardComponent,
     GuessNameComponent,
+    ImageCropperComponent
   ],
   imports: [
     BrowserModule,

@@ -28,8 +28,7 @@ export class GuessNameComponent implements OnInit {
   }
 
   guessName(guess) {
-    const fullName = `${this.personToGuess.firstName} ${this.personToGuess.lastName}`;
-    const isCorrectGuess = guess.trim().toLocaleLowerCase() === fullName.toLocaleLowerCase();
+    const isCorrectGuess = guess.trim().toLocaleLowerCase() === this.personToGuess.name.toLocaleLowerCase();
 
     if (isCorrectGuess) {
       if (++this.correctGuesses < this.people.length) {

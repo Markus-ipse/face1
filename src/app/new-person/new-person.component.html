@@ -7,34 +7,17 @@
     </header>
     <form (ngSubmit)="onSubmit()" #personForm="ngForm">
       <section class="modal-card-body">
-        <label for="firstName">First name</label>
+        <div>
+          <img-cropper [image]="data" [settings]="cropperSettings"></img-cropper>
+        </div>
+        <label for="name">Name</label>
         <p class="control">
           <input
-            [(ngModel)]="model.firstName"
+            [(ngModel)]="model.name"
             type="text"
             class="input"
-            name="firstName"
-            id="firstName"
-          >
-        </p>
-        <label for="lastName">Last name</label>
-        <p class="control">
-          <input
-            [(ngModel)]="model.lastName"
-            type="text"
-            class="input"
-            name="lastName"
-            id="lastName"
-          >
-        </p>
-        <label for="pictureUrl">Picture url</label>
-        <p class="control">
-          <input
-            [(ngModel)]="model.imgUrl"
-            type="text"
-            class="input"
-            name="pictureUrl"
-            id="pictureUrl"
+            name="name"
+            id="name"
           >
         </p>
       </section>

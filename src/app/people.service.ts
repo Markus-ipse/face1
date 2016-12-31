@@ -20,9 +20,9 @@ export class PeopleService {
       .catch(this.handleError);
   }
 
-  create(firstName: string, lastName: string, imgUrl: string): Promise<Person> {
+  create(name: string, imgUrl: string): Promise<Person> {
     return this.http
-      .post(this.peopleUrl, JSON.stringify({firstName, lastName, imgUrl}), {headers: this.headers})
+      .post(this.peopleUrl, JSON.stringify({name: name.trim(), imgUrl}), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data)
       .catch(this.handleError);

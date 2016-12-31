@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { NewPersonComponent } from './new-person.component';
 import {FormsModule} from '@angular/forms';
+import { ImageCropperComponent } from 'ng2-img-cropper';
 
 describe('NewPersonComponent', () => {
   let component: NewPersonComponent;
@@ -13,7 +14,7 @@ describe('NewPersonComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
-      declarations: [ NewPersonComponent ]
+      declarations: [ NewPersonComponent, ImageCropperComponent ]
     })
     .compileComponents();
   }));

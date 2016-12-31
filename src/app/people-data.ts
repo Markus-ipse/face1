@@ -5,20 +5,17 @@ export class InMemoryPeopleDataService implements InMemoryDbService {
     const people = [
       {
         id: 1,
-        firstName: 'Ned',
-        lastName: 'Stark',
+        name: 'Ned Stark',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/en/5/52/Ned_Stark-Sean_Bean.jpg'
       },
       {
         id: 2,
-        firstName: 'Catelyn',
-        lastName: 'Stark',
+        name: 'Catelyn Stark',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/en/2/25/Catelyn_Stark-Michelle_Fairley_S3.jpg'
       },
       {
         id: 3,
-        firstName: 'Sansa',
-        lastName: 'Stark',
+        name: 'Sansa Stark',
         imgUrl: 'https://upload.wikimedia.org/wikipedia/en/7/74/SophieTurnerasSansaStark.jpg'
       }
     ];
