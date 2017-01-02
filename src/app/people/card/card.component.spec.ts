@@ -21,7 +21,7 @@ describe('CardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
-    expectedPerson = new Person(42, 'john', 'doe', 'someUrl');
+    expectedPerson = new Person(42, 'john doe', 'someUrl');
     component.person = expectedPerson;
     fixture.detectChanges();
   });

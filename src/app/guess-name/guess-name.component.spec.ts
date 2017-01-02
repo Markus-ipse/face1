@@ -5,13 +5,13 @@ import { DebugElement } from '@angular/core';
 
 import { GuessNameComponent } from './guess-name.component';
 import {Person} from '../person.model';
-import {PeopleService} from '../people.service';
 import {FormsModule} from '@angular/forms';
+import { GameService } from './game.service';
 
-class PeopleServiceSpy {
-  testPerson = new Person(42, 'John', 'doe', 'someUrl');
+class GameServiceSpy {
+  testPerson = new Person(42, 'John Doe', 'someUrl');
 
-  getPeople = jasmine.createSpy('getPeople').and.callFake(
+  init = jasmine.createSpy('init').and.callFake(
     () => Promise
       .resolve(true)
       .then(() => [Object.assign(this.testPerson)])
@@ -30,7 +30,7 @@ describe('GuessNameComponent', () => {
       .overrideComponent(GuessNameComponent, {
         set: {
           providers: [
-            { provide: PeopleService, useClass: PeopleServiceSpy }
+            { provide: GameService, useClass: GameServiceSpy }
           ]
         }
       })
