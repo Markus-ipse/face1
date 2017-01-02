@@ -11,7 +11,7 @@ import { PeopleComponent } from './people/people.component';
 import { InMemoryPeopleDataService } from './people-data';
 import { NewPersonComponent } from './new-person/new-person.component';
 import { CardComponent } from './people/card/card.component';
-import { GuessNameComponent } from './guess-name/guess-name.component';
+import { GameModule } from './game/game.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,6 @@ import { GuessNameComponent } from './guess-name/guess-name.component';
     PeopleComponent,
     NewPersonComponent,
     CardComponent,
-    GuessNameComponent,
     ImageCropperComponent
   ],
   imports: [
@@ -28,6 +27,7 @@ import { GuessNameComponent } from './guess-name/guess-name.component';
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryPeopleDataService),
     AppRoutingModule,
+    GameModule
   ],
   providers: [],
   bootstrap: [AppComponent]

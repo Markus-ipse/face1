@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { GuessNameComponent } from './guess-name.component';
+import { GameComponent } from './game.component';
 import {Person} from '../person.model';
 import {FormsModule} from '@angular/forms';
 import { GameService } from './game.service';
@@ -18,16 +18,16 @@ class GameServiceSpy {
   );
 }
 
-describe('GuessNameComponent', () => {
-  let component: GuessNameComponent;
-  let fixture: ComponentFixture<GuessNameComponent>;
+describe('GameComponent', () => {
+  let component: GameComponent;
+  let fixture: ComponentFixture<GameComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
-      declarations: [ GuessNameComponent ]
+      declarations: [ GameComponent ]
     })
-      .overrideComponent(GuessNameComponent, {
+      .overrideComponent(GameComponent, {
         set: {
           providers: [
             { provide: GameService, useClass: GameServiceSpy }
@@ -38,7 +38,7 @@ describe('GuessNameComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GuessNameComponent);
+    fixture = TestBed.createComponent(GameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

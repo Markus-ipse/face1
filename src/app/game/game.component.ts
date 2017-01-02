@@ -4,12 +4,12 @@ import { GameService } from './game.service';
 import { PeopleService } from '../people.service';
 
 @Component({
-  selector: 'f1-guess-name',
-  templateUrl: './guess-name.component.html',
-  styleUrls: ['./guess-name.component.css'],
+  selector: 'f1-game',
+  templateUrl: './game.component.html',
+  styleUrls: ['./game.component.css'],
   providers: [PeopleService, GameService]
 })
-export class GuessNameComponent implements OnInit {
+export class GameComponent implements OnInit {
   personToGuess = nullPerson;
   allCorrectlyGuessed = false;
 
