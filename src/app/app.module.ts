@@ -11,7 +11,6 @@ import { PeopleComponent } from './people/people.component';
 import { InMemoryPeopleDataService } from './people-data';
 import { NewPersonComponent } from './new-person/new-person.component';
 import { CardComponent } from './people/card/card.component';
-import { GameModule } from './game/game.module';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { GameModule } from './game/game.module';
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryPeopleDataService),
-    AppRoutingModule,
-    GameModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
