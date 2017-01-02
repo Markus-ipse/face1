@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PeopleService } from '../people.service';
+import { PeopleService } from '../people/people.service';
 import { Person } from '../person.model';
 
 const normalize = (str: string) => str ? str.trim().toLocaleLowerCase() : '';

@@ -3,7 +3,7 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { GameService } from './game.service';
 import { Person } from '../person.model';
-import { PeopleService } from '../people.service';
+import { PeopleService } from '../people/people.service';
 
 class PeopleServiceSpy {
   testPerson = new Person(42, 'John Doe', 'someUrl');

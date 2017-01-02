@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Person } from '../person.model';
-import { PeopleService } from '../people.service';
+import { PeopleService } from './people.service';
 
 @Component({
   selector: 'f1-people-list',
   templateUrl: './people.component.html',
-  providers: [PeopleService],
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {

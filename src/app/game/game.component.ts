@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { nullPerson } from '../person.model';
 import { GameService } from './game.service';
-import { PeopleService } from '../people.service';
 
 @Component({
   selector: 'f1-game',
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css'],
-  providers: [PeopleService, GameService]
+  providers: [GameService]
 })
 export class GameComponent implements OnInit {
   personToGuess = nullPerson;
