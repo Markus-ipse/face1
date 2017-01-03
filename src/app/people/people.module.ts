@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ImageCropperComponent } from 'ng2-img-cropper';
 import { PeopleComponent } from './people.component';
 import { NewPersonComponent } from '../new-person/new-person.component';
 import { CardComponent } from './card/card.component';
 import { PeopleService } from './people.service';
-import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule
+    SharedModule
   ],
   declarations: [
     PeopleComponent,
