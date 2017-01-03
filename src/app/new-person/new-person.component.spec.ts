@@ -6,6 +6,7 @@ import { DebugElement } from '@angular/core';
 import { NewPersonComponent } from './new-person.component';
 import {FormsModule} from '@angular/forms';
 import { ImageCropperComponent } from 'ng2-img-cropper';
+import { SafeUrlPipe } from '../shared/safe-url.pipe';
 
 describe('NewPersonComponent', () => {
   let component: NewPersonComponent;
@@ -14,7 +15,7 @@ describe('NewPersonComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
-      declarations: [ NewPersonComponent, ImageCropperComponent ]
+      declarations: [ NewPersonComponent, ImageCropperComponent, SafeUrlPipe ]
     })
     .compileComponents();
   }));

@@ -1,6 +1,6 @@
-import {Component, Output, EventEmitter, HostBinding} from '@angular/core';
-import {Person} from '../person.model';
+import { Component, Output, EventEmitter, HostBinding } from '@angular/core';
 import { CropperSettings } from 'ng2-img-cropper';
+import { Person, noImgDataUrl } from '../person.model';
 
 const inactiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
 
@@ -14,6 +14,7 @@ export class NewPersonComponent {
   isActive = false;
   data: any;
   cropperSettings: CropperSettings;
+  noImgDataUrl = noImgDataUrl;
 
   @Output() submitted = new EventEmitter<Person>();
   @HostBinding('class') classes = inactiveClasses;

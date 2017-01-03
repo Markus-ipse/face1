@@ -1,6 +1,8 @@
 .add-card {
-  display: flex;
   height: 100%;
-  align-items: center;
-  justify-content: center;
+}
+
+.button-wrapper {
+  text-align: center;
+  padding: 14px 0;
 }

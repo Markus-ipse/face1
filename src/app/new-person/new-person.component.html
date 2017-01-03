@@ -27,7 +27,15 @@
       </footer>
     </form>
   </div>
-  <div *ngIf="!isActive">
-    <button (click)="onActivate()" class="button is-primary">Add</button>
+  <div *ngIf="!isActive" class="card-image">
+    <figure class="image" (click)="onActivate()">
+      <img
+        [src]="noImgDataUrl | safeUrl"
+        alt="Add new person"
+      >
+    </figure>
+    <div class="button-wrapper">
+      <button (click)="onActivate()" class="button is-primary">Add</button>
+    </div>
   </div>
 </div>
