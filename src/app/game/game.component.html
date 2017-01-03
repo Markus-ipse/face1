@@ -1,5 +1,5 @@
 <figure class="image img-preview">
-  <img [src]="personToGuess.imgUrl" alt="Someone">
+  <img [src]="personToGuess.imgUrl | safeUrl" alt="Someone">
 </figure>
 <form *ngIf="!allCorrectlyGuessed" (ngSubmit)="guessName(guess.value); guess.value=''" #guessForm="ngForm">
   <p class="control">

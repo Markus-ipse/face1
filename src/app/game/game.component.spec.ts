@@ -7,6 +7,7 @@ import { GameComponent } from './game.component';
 import {Person} from '../person.model';
 import {FormsModule} from '@angular/forms';
 import { GameService } from './game.service';
+import { SafeUrlPipe } from '../shared/safe-url.pipe';
 
 class GameServiceSpy {
   testPerson = new Person(42, 'John Doe', 'someUrl');
@@ -25,7 +26,7 @@ describe('GameComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
-      declarations: [ GameComponent ]
+      declarations: [ GameComponent, SafeUrlPipe ]
     })
       .overrideComponent(GameComponent, {
         set: {

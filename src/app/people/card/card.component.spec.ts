@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { CardComponent } from './card.component';
 import {Person} from '../../person.model';
+import { SafeUrlPipe } from '../../shared/safe-url.pipe';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -13,7 +14,7 @@ describe('CardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardComponent ]
+      declarations: [ CardComponent, SafeUrlPipe ]
     })
     .compileComponents();
   }));

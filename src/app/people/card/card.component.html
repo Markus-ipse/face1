@@ -2,7 +2,7 @@
   <div class="card-image">
     <figure class="image img-preview">
       <img
-        src="{{person.imgUrl}}"
+        [src]="person.imgUrl | safeUrl"
         alt="{{person.name}}"
         onerror="this.onerror=null;this.src='assets/camera.png'"
       >
