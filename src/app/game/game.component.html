@@ -1,8 +1,16 @@
-<figure class="image img-preview">
-  <img [src]="personToGuess.imgUrl | safeUrl" alt="Someone">
-</figure>
-<form *ngIf="!allCorrectlyGuessed" (ngSubmit)="guessName(guess.value); guess.value=''" #guessForm="ngForm">
-  <p class="control">
-    <input class="input" type="text" #guess>
-  </p>
-</form>
+<div class="wrapper">
+  <figure class="image img-preview">
+    <img [src]="personToGuess.imgUrl | safeUrl" alt="Someone">
+  </figure>
+  <form
+    class="name-form"
+    *ngIf="!allCorrectlyGuessed"
+    (ngSubmit)="guessName(guess.value); guess.value=''"
+    #guessForm="ngForm"
+  >
+    <p class="control has-addons">
+      <input class="input is-expanded" type="text" #guess>
+      <button type="submit" class="button">Submit</button>
+    </p>
+  </form>
+</div>
