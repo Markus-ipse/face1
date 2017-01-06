@@ -10,7 +10,7 @@ const inactiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
   styleUrls: ['./new-person.component.css']
 })
 export class NewPersonComponent {
-  model = new Person(null, '', '');
+  model = new Person(null, '', '', []);
   isActive = false;
   data: any;
   cropperSettings: CropperSettings;
@@ -48,6 +48,6 @@ export class NewPersonComponent {
     this.classes = inactiveClasses;
     this.model.imgUrl = this.data.image;
     this.submitted.emit(this.model);
-    this.model = new Person(null, '', '');
+    this.model = new Person(null, '', '', []);
   }
 }
