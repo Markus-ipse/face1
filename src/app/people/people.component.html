@@ -1,8 +1,14 @@
 <div class="container">
+  <p class="control is-pulled-right">
+    <label class="checkbox">
+      <input type="checkbox" [checked]="showTags" (change)="onToggleTags($event)">
+      Show tags
+    </label>
+  </p>
   <h2 class="subtitle">My peeps</h2>
   <div class="columns is-multiline is-mobile">
     <div *ngFor="let person of people" class="column people-card">
-      <f1-card [person]="person"></f1-card>
+      <f1-card [person]="person" [showTags]="showTags"></f1-card>
     </div>
     <f1-new-person (submitted)="onAddPerson($event)"></f1-new-person>
   </div>

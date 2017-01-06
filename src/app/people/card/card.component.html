@@ -11,4 +11,7 @@
   <div class="card-content">
     <span class="content">{{person.name}}</span>
   </div>
+  <div *ngIf="showTags" class="is-overlay">
+    <span *ngFor="let tag of person.tags" class="tag f1-tag">{{tag}}</span>
+  </div>
 </div>

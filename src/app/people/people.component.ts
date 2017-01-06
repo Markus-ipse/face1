@@ -10,6 +10,7 @@ import { PeopleService } from './people.service';
 })
 export class PeopleComponent implements OnInit {
   people: Person[];
+  showTags = true;
 
   constructor(private peopleService: PeopleService) {}
 
@@ -21,6 +22,10 @@ export class PeopleComponent implements OnInit {
   onAddPerson(person: Person): void {
     this.peopleService.create(person.name, person.imgUrl)
       .then(p => this.people.push(p));
+  }
+
+  onToggleTags(e) {
+    this.showTags = e.target.checked;
   }
 
   ngOnInit(): void {

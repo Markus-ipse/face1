@@ -9,6 +9,7 @@ import {Person} from '../../person.model';
 export class CardComponent {
 
   @Input() person: Person;
+  @Input() showTags: boolean;
 
   constructor() { }
 
