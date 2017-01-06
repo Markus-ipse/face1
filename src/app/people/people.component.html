@@ -1,7 +1,9 @@
-<h2 class="subtitle">My peeps</h2>
-<div class="columns is-multiline is-mobile container">
-  <div *ngFor="let person of people" class="column is-one-third-mobile is-one-quarter-tablet">
-    <f1-card [person]="person"></f1-card>
+<div class="container">
+  <h2 class="subtitle">My peeps</h2>
+  <div class="columns is-multiline is-mobile">
+    <div *ngFor="let person of people" class="column people-card">
+      <f1-card [person]="person"></f1-card>
+    </div>
+    <f1-new-person (submitted)="onAddPerson($event)"></f1-new-person>
   </div>
-  <f1-new-person (submitted)="onAddPerson($event)"></f1-new-person>
 </div>

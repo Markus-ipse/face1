@@ -12,3 +12,38 @@
   right: 0;
   top: 0;
 }
+
+.is-fullheight {
+  height: 100%;
+}
+
+.people-card {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  width: 50%;
+}
+
+@media screen and (min-width: 568px) {
+  .people-card {
+    width: 33.33%
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .people-card {
+    width: 25%
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .people-card {
+    width: 20%
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .people-card {
+    width: 16.666%
+  }
+}

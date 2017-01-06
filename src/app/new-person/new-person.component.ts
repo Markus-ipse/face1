@@ -2,7 +2,7 @@ import { Component, Output, EventEmitter, HostBinding } from '@angular/core';
 import { CropperSettings } from 'ng2-img-cropper';
 import { Person, noImgDataUrl } from '../person.model';
 
-const inactiveClasses = 'column is-one-third-mobile is-one-quarter-tablet';
+const inactiveClasses = 'column people-card';
 
 @Component({
   selector: 'f1-new-person',
