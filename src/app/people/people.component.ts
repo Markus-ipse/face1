@@ -10,7 +10,7 @@ import { PeopleService } from './people.service';
 })
 export class PeopleComponent implements OnInit {
   people: Person[];
-  showTags = true;
+  showTags = false;
 
   constructor(private peopleService: PeopleService) {}
 

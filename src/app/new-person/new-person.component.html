@@ -7,8 +7,8 @@
     </header>
     <form (ngSubmit)="onSubmit()" #personForm="ngForm">
       <section class="modal-card-body">
-        <div>
-          <img-cropper [image]="data" [settings]="cropperSettings"></img-cropper>
+        <div #canvasContainer>
+          <img-cropper *ngIf="cropperReady" [image]="data" [settings]="cropperSettings"></img-cropper>
         </div>
         <label for="name">Name</label>
         <p class="control">
