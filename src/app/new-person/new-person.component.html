@@ -1,33 +1,5 @@
-<div [ngClass]="{'modal is-active': isActive, 'card add-card': !isActive}">
-  <div *ngIf="isActive" class="modal-background"></div>
-  <div *ngIf="isActive" class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Modal title</p>
-      <button class="delete" (click)="onCancel()"></button>
-    </header>
-    <form (ngSubmit)="onSubmit()" #personForm="ngForm">
-      <section class="modal-card-body">
-        <div #canvasContainer>
-          <img-cropper *ngIf="cropperReady" [image]="data" [settings]="cropperSettings"></img-cropper>
-        </div>
-        <label for="name">Name</label>
-        <p class="control">
-          <input
-            [(ngModel)]="model.name"
-            type="text"
-            class="input"
-            name="name"
-            id="name"
-          >
-        </p>
-      </section>
-      <footer class="modal-card-foot">
-        <button type="submit" class="button is-primary">Add</button>
-        <button type="button" class="button" (click)="onCancel()">Cancel</button>
-      </footer>
-    </form>
-  </div>
-  <div *ngIf="!isActive" class="card-image">
+<div class="card add-card">
+  <div class="card-image">
     <figure class="image" (click)="onActivate()">
       <img
         [src]="noImgDataUrl | safeUrl"
@@ -39,3 +11,5 @@
     </div>
   </div>
 </div>
+
+<f1-person-editor *ngIf="isActive" (submitted)="onSubmit($event)"></f1-person-editor>

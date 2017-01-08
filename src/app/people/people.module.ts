@@ -5,6 +5,7 @@ import { NewPersonComponent } from '../new-person/new-person.component';
 import { CardComponent } from './card/card.component';
 import { PeopleService } from './people.service';
 import { SharedModule } from '../shared/shared.module';
+import { PersonEditorComponent } from '../person-editor/person-editor.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { SharedModule } from '../shared/shared.module';
     PeopleComponent,
     NewPersonComponent,
     CardComponent,
-    ImageCropperComponent
+    ImageCropperComponent,
+    PersonEditorComponent
   ],
   providers: [
     PeopleService

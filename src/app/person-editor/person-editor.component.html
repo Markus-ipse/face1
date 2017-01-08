@@ -1,0 +1,30 @@
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" (click)="onCancel()"></button>
+    </header>
+    <form (ngSubmit)="onSubmit()" #personForm="ngForm">
+      <section class="modal-card-body">
+        <div #canvasContainer>
+          <img-cropper *ngIf="cropperReady" [image]="data" [settings]="cropperSettings"></img-cropper>
+        </div>
+        <label for="name">Name</label>
+        <p class="control">
+          <input
+            [(ngModel)]="model.name"
+            type="text"
+            class="input"
+            name="name"
+            id="name"
+          >
+        </p>
+      </section>
+      <footer class="modal-card-foot">
+        <button type="submit" class="button is-primary">Add</button>
+        <button type="button" class="button" (click)="onCancel()">Cancel</button>
+      </footer>
+    </form>
+  </div>
+</div>

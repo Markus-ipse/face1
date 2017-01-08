@@ -10,6 +10,6 @@
     <div *ngFor="let person of people" class="column people-card">
       <f1-card [person]="person" [showTags]="showTags"></f1-card>
     </div>
-    <f1-new-person (submitted)="onAddPerson($event)"></f1-new-person>
+    <f1-new-person class="column people-card" (submitted)="onAddPerson($event)"></f1-new-person>
   </div>
 </div>

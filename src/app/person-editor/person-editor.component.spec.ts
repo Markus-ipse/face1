@@ -3,31 +3,27 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { NewPersonComponent } from './new-person.component';
-import { ImageCropperComponent } from 'ng2-img-cropper';
-import { SafeUrlPipe } from '../shared/safe-url.pipe';
-import { PersonEditorComponent } from '../person-editor/person-editor.component';
+import { PersonEditorComponent } from './person-editor.component';
 import { FormsModule } from '@angular/forms';
+import { ImageCropperComponent } from 'ng2-img-cropper';
 
-describe('NewPersonComponent', () => {
-  let component: NewPersonComponent;
-  let fixture: ComponentFixture<NewPersonComponent>;
+describe('PersonEditorComponent', () => {
+  let component: PersonEditorComponent;
+  let fixture: ComponentFixture<PersonEditorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule ],
       declarations: [
-        NewPersonComponent,
         PersonEditorComponent,
-        ImageCropperComponent,
-        SafeUrlPipe
+        ImageCropperComponent
       ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewPersonComponent);
+    fixture = TestBed.createComponent(PersonEditorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
